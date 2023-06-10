@@ -1,0 +1,37 @@
+{
+  "name": "Volume control IME",
+  "version": "0.0",
+  "manifest_version": 3,
+  "description": "Provides an IME for US keyboards with mappings for volume up/down",
+  "background": {
+    "service_worker": "main.js"
+  },
+  "permissions": [
+    "input",
+    "storage"
+  ],
+  "input_components": [
+    {
+      "name": "Volume control shortcuts",
+      "type": "ime",
+      "id": "vol_ime",
+      "description": "US keyboard layout with shortcuts for volume up/down",
+      "language": "en-US",
+      "layouts": ["us"]
+    }
+  ],
+  "commands": {
+    "vol-up": {
+      "suggested_key": {
+        "default": "Ctrl+Insert"
+      },
+      "description": "Turn volume up"
+    },
+    "vol-down": {
+      "suggested_key": {
+        "default": "Ctrl+Delete"
+      },
+      "description": "Turn volume down"
+    }
+  }
+}
